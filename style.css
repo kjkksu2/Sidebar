@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  z-index: 999;
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: #23242b;
+}
+
+header h2 span {
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+header h2 label {
+  margin-left: 100px;
+}
+
+header h2 label i {
+  color: white;
+  cursor: pointer;
+}
+
+header > span {
+  color: white;
+  background: #01a5d8;
+  padding: 5px 10px;
+  font-weight: 700;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.sidebar {
+  z-index: 888;
+  position: fixed;
+  width: 250px;
+  height: 100%;
+  padding-top: 100px;
+  background: #2f343e;
+  color: white;
+  transition: transform 0.5s;
+}
+
+.sidebar .user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.sidebar .user img {
+  width: 120px;
+  border-radius: 25px;
+  margin-bottom: 10px;
+}
+
+.sidebar .user span {
+  font-size: 1.2em;
+}
+
+.sidebar a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  line-height: 60px;
+  padding-left: 30px;
+  font-size: 1.2em;
+}
+
+.sidebar a:hover {
+  background: #01a5d8;
+}
+
+.sidebar a span {
+  text-transform: uppercase;
+  font-size: 0.9em;
+  margin-left: 10px;
+}
+
+input:checked ~ .sidebar {
+  transform: translateX(-80%);
+}
+
+input:checked ~ .sidebar a span {
+  display: none;
+}
+
+input:checked ~ .sidebar a i {
+  position: relative;
+  left: 84%;
+}
+
+#check {
+  display: none;
+}
+
+.content {
+  height: 100vh;
+  background: url(bg.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-left: 240px;
+  transition: 0.5s;
+}
+
+input:checked ~ .content {
+  margin-left: 0;
+}
